@@ -1,0 +1,30 @@
+{
+  // Extend existing configuration
+  // from ESlint and eslint-plugin-react defaults.
+  "extends": [
+    "eslint:recommended", "plugin:react/recommended"
+  ],
+  // Enable ES6 support. If you want to use custom Babel
+  // features, you will need to enable a custom parser
+  // as described in a section below.
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+
+  "parser": "babel-eslint",
+
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  // Enable custom plugin known as eslint-plugin-react
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "no-console": 0,
+    "quotes": [2, "single"],
+    "no-underscore-dangle": 0
+  }
+}
