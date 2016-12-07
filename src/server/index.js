@@ -5,8 +5,23 @@ import './db';
 import formidable from "express-formidable";
 import {Model as User, Router as authRouter} from './auth';
 import ENV from './config';
+// If the route accept allow cross site request for this routes mode. Add cors middleware to allow cross site request for that route
+import cors from './middlewares/cors';
 
 const app = express();
+
+app.use((req, res, next) => {
+    // Allow Preflighted requests when client send from different domain
+    // https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS#Preflighted_requests
+    if ('OPTIONS' === req.method) {
+        res.header('Access-Control-Allow-Origin', '*');
+        res.header('Access-Control-Allow-Headers', 'Cache-Control, Pragma, Origin, Authorization, Content-Type, X-Requested-With');
+        res.sendStatus(200);
+    }
+    else {
+        next();
+    }
+});
 
 app.use(formidable());
 
@@ -37,15 +52,17 @@ app.get('/dev/setup', function (req, res) {
 
 });
 
-app.get('/dev/check',
+
+app.post('/dev/check',
+    // Allow cross site request for this route
+    cors,
     // Checking token generate by route auth/get.
     // Need to set token in header
     // Example :  Authorization : Bearer eyJhbGciOiJIUzI1N...
     // If no token provided on header or token is invalid. express-jwt middleware will return status code 401 Unauthorized
     jwtMiddleware({secret: ENV.JWT_SECRET}),
     function (req, res) {
-        console.log(req);
-        res.send(req.user);
+        res.json(req.user);
     });
 
 
