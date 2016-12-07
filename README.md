@@ -73,6 +73,12 @@ Open server dev location and got to route localhost 3031/dev/setup to add a user
 
 There are few more command for development
 
+Debug express app. Using debugger built in nodejs
+
+```javascript
+yarn run server:debug
+```
+
 Lint js code style via eslint
 
 ```javascript
@@ -106,8 +112,7 @@ To generate build stat to client-build-analyze.json file then upload to http://w
 - Added server build process. Convert ES6 to ES5.
 - Support server side rendering.
 - Add testing example.
-- Add example when client access to an protected api on the express app. Right now you can try to access to localhost 3031/dev/check to see the protected route. 
-We have to set an valid token in the header  Authorization : Bearer eyJhbGciOiJIUzI1N... each request to get pass JWT middleware when go to a protected express route.
+
 
 
 
