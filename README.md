@@ -28,6 +28,14 @@ Using express and MongoDB for the backend. Built in JSON Web Token Authenticatio
 - dotenv
 
 
+In the folders
+
+There are 3 files config env, you should copy them and remove 'example'. Each file is the config file for each environment
+
+- .env (config file for nodejs app) 
+- .env.client.dev (config file for webpack bundle in development)
+- .env.client.build (config file for webpack bundle in final build process)
+
 
 ##How to start to develop.
 

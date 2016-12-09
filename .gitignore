@@ -3,3 +3,6 @@
 /client/
 /client-build-analyze.json
 /yarn.lock
+/.env.client.dev
+/.env.client.build
+/.env
