@@ -58,6 +58,8 @@ class Login extends React.Component {
             <div>
                 <h2>This is our login page</h2>
                 <p>Please login to visit our private page.</p>
+                <p>If you run dev setup so the account with the default setting, or in demo online. The account will be</p>
+                <p>giang.nguyen.dev@gmail.com/123456</p>
                 {unauthorized}
                 {failed}
                 <form onSubmit={this.login} ref="form">

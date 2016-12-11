@@ -1,6 +1,12 @@
 #Express React Starter Kit
 
 The project right now is just for the showcase. There are still many  things missing like build process for the nodeJS server (Right now just run through node-babel), testing for client and server...
+Regardless, adding many things might be overkill and hard for begin develop as soon as possible. You can customize it and choose the right plugin, build process your own.
+
+## Demo
+Demo online here http://express-react-starter-kit.gndplayground.com/
+Use nginx proxy_pass backend to http://express-react-starter-kit.gndplayground.com/api
+With nginx proxy_pass we can prevent cors and preflight request 
 
 ##Project overview
 The project aims for a starter kit easy to start as possible.
