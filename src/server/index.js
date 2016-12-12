@@ -72,3 +72,5 @@ const http = require('http').Server(app);
 http.listen(ENV.SERVER_PORT, () => {
     console.log('App running in port ' + ENV.SERVER_PORT);
 });
+
+export default app;
