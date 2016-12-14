@@ -1,0 +1,26 @@
+exports[`test Should page home render correctly 1`] = `
+<div>
+  <h2
+    className="route-title">
+    Home page
+  </h2>
+  <p>
+    This is our hom page.
+  </p>
+  <br />
+  <p>
+    Please login then try to check access to private api
+  </p>
+  <p>
+    http://localhost:3031/dev/check
+  </p>
+  <button
+    onClick={[Function]}>
+    Check access
+  </button>
+  <br />
+  <p>
+    
+  </p>
+</div>
+`;

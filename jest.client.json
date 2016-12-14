@@ -1,0 +1,12 @@
+{
+  "verbose": true,
+  "rootDir": "./src/client",
+  "moduleNameMapper": {
+    "\\.(css|scss|less)$": "identity-obj-proxy"
+  },
+  "globals": {
+    "__ENV": {
+      "API_LOCATION": "http://localhost:3031"
+    }
+  }
+}

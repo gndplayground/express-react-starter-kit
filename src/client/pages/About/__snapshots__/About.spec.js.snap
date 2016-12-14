@@ -1,4 +1,4 @@
-exports[`test Link changes the class when hovered 1`] = `
+exports[`test Should page about render correctly 1`] = `
 <div>
   <h2
     className="route-title">

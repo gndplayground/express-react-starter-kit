@@ -14,15 +14,18 @@ export const store = createStore(
     )
 );
 
-// Read local storage. If we have user data we parse it and update redux state
-try {
+if(process.env.npm_lifecycle_event !== 'client:test'){
 
-    if (window.localStorage.hasOwnProperty('user')) {
-        store.dispatch(auth.actions.userSet(JSON.parse(window.localStorage.user)))
+    // Read local storage. If we have user data we parse it and update redux state
+    try {
+
+        if (window.localStorage.hasOwnProperty('user')) {
+            store.dispatch(auth.actions.userSet(JSON.parse(window.localStorage.user)))
+        }
     }
-}
-catch (e) {
+    catch (e) {
 
-    window.localStorage.clear();
-    console.log('Something wrong with local storage. Cleared local storage');
+        window.localStorage.clear();
+        console.log('Something wrong with local storage. Cleared local storage');
+    }
 }

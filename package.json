@@ -8,7 +8,7 @@
   "scripts": {
     "client:dev": "webpack-dev-server --env.dev",
     "client:build": "webpack",
-    "client:test": "jest",
+    "client:test": "jest --config jest.client.json",
     "client:analyze": "webpack --json > client-build-analyze.json",
     "client:lint": "eslint src/client/**/*",
     "server:dev": "nodemon --exec DEBUG=express* babel-node src/server/index.js",
@@ -43,6 +43,7 @@
   "devDependencies": {
     "babel-core": "^6.18.2",
     "babel-eslint": "^7.1.1",
+    "babel-jest": "^17.0.2",
     "babel-loader": "^6.2.8",
     "babel-plugin-transform-class-properties": "^6.19.0",
     "babel-plugin-transform-object-rest-spread": "^6.19.0",
@@ -60,6 +61,7 @@
     "eslint-loader": "^1.6.1",
     "eslint-plugin-react": "^6.7.1",
     "html-webpack-plugin": "^2.24.1",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^17.0.3",
     "mocha": "^3.2.0",
     "node-sass": "^3.13.0",

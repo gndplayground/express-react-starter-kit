@@ -2,7 +2,7 @@ import React from 'react';
 import About from './About';
 import renderer from 'react-test-renderer';
 
-test('Link changes the class when hovered', () => {
+test('Should page about render correctly', () => {
     const component = renderer.create(
         <About/>
     );
