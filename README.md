@@ -1,6 +1,6 @@
 #Express React Starter Kit
 
-The project right now is just for the showcase. There are still many  things missing like build process for the nodeJS server (Right now just run through node-babel), testing for client and server...
+The project right now is just for the showcase and use for prototype. There are still many  things missing like build process for the nodeJS server (Right now just run through node-babel), testing for client and server...
 Regardless, adding many things might be overkill and hard for begin develop as soon as possible. You can customize it and choose the right plugin, build process your own.
 
 ## Demo
